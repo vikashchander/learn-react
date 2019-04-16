@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/react-dom-factories@1.0.2/index.min.js"></script>
+</head>
+<body>
+    <div id="name"></div>
+    <script type="text/javascript">
+      class Pet extends React.Component{
+          render(){
+              //1st argument for h2 attribute and 2nd for h2 name
+              const h2 = ReactDOMFactories.h2(null,"The OWL");  
+              const img = ReactDOMFactories.img({
+                  src:"https://images.unsplash.com/photo-1503259901638-6bf44a4cd670?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                  alt:"moxie my owl"
+              });
+              return ReactDOMFactories.div(null,h2,img);
+          }
+      }
+    ReactDOM.render(React.createElement(Pet),document.getElementById("name"));
+    </script>
+</body>
+</html>
