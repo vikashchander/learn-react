@@ -1,0 +1,13 @@
+.machine{
+    background-color: aqua;
+    font-size: 2em;
+}
+
+.win{
+    background-color: green;
+    color:white;
+}
+.lose{
+    background-color: red;
+    color:white;
+}
